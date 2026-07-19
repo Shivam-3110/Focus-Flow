@@ -1,60 +1,90 @@
-<!DOCTYPE html>
+!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="main"> 
-        <nav>
-
-        </nav>
-        <section class="allElems">
-
-        <div class="todo elem" id="1">
-           <img
-              src="https://i.pinimg.com/736x/24/51/50/245150d3136728d71bd7da2f2ecf915c.jpg"
-              alt=""
-            />
-          <h2>To DO List </h2>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus-Flow</title>
+    <link
+      rel="shortcut icon"
+      href="./favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <nav>
+        <div class="nav-in">
+          <h2>Focus-Flow</h2>
+        <div class="theme">
+        <i class="ri-sun-line"></i>
+      </div>
         </div>
-
-        <div class="daily elem" id="2">
+      </nav>
+      <section class="allElems">
+        <header>
+          <div class="header1">
+            <h2>7 Feb, 2026</h2>
+            <h1>Saturday, 1:00 pm</h1>
+            <h4>Gorakhpur</h4>
+          </div>
+          <div class="header2">
+            <h2>20°C</h2>
+            <h4>Light rain</h4>
+            <h3 class="precipitation">Precipitation: 35%</h3>
+            <h3 class="humidity">Humidity: 49%</h3>
+            <h3 class="wind">Wind: 10 km/h</h3>
+          </div>
+        </header>
+        <div class="allFeatures">
+          <div class="todo elem" id="0">
             <img
               src="https://i.pinimg.com/736x/24/51/50/245150d3136728d71bd7da2f2ecf915c.jpg"
               alt=""
             />
-            Daily Planner 
-        </div>
+            <h2>To Do List</h2>
+          </div>
 
-        <div class="moti elem" id="3"> 
-           <img
-              src="https://i.pinimg.com/736x/24/51/50/245150d3136728d71bd7da2f2ecf915c.jpg"
+          <div class="daily elem" id="1">
+            <img
+              src="https://i.pinimg.com/736x/52/c3/77/52c377d4ddcc536d539c159e9f71eed4.jpg"
               alt=""
             />
-            Motivational Quotes
-         </div>
+            <h2>Daily Planner</h2>
+          </div>
 
-        <div class="pomo elem" id="4"> 
-          <img
-              src="https://i.pinimg.com/736x/24/51/50/245150d3136728d71bd7da2f2ecf915c.jpg"
+          <div class="moti elem" id="2">
+            <img
+              src="https://i.pinimg.com/736x/0c/0f/61/0c0f61e5b6dc8d26655b4c446bf2dba7.jpg"
               alt=""
             />
-            Pomodoro Timer
-        </div>
+            <h2>Motivation</h2>
+          </div>
 
-        <div class="goals elem" id="5"> 
-          <img
-              src="https://i.pinimg.com/736x/24/51/50/245150d3136728d71bd7da2f2ecf915c.jpg"
+          <div class="pomo elem" id="3">
+            <img
+              src="https://i.pinimg.com/736x/fc/3e/be/fc3ebed80937c120dd5a3a76f42e2036.jpg"
               alt=""
             />
-            Daily Goals 
-        </div>
+            <h2>Pomodoro Timer</h2>
+          </div>
 
-        </section>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+          <div class="goal elem" id="4">
+            <img
+              src="https://i.pinimg.com/736x/cb/5b/c5/cb5bc53890e110270e1a1766b8d78653.jpg"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullElem todo-list-fullpage">
+        <button class="back" id="0"><i class="ri-close-fill"></i></button>
+        <h2>Your Personalised Task List</h2>
+        <div class="todo-container">
+          <div class="addTask">
