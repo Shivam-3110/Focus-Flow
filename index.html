@@ -88,3 +88,87 @@
         <h2>Your Personalised Task List</h2>
         <div class="todo-container">
           <div class="addTask">
+            <form>
+              <input id="task-input" type="text" placeholder="Enter task" />
+              <textarea
+                placeholder="Enter details"
+                name=""
+                row="10"
+                cols="30"
+                id=""
+              ></textarea>
+              <div class="mark-imp">
+                <input type="checkbox" name="" id="checkbox" />
+                <label for="checkbox">Mark as Important!</label>
+              </div>
+              <button>Add Task</button>
+            </form>
+          </div>
+          <div class="allTask"></div>
+        </div>
+      </section>
+
+      <section class="fullElem daily-planner-fullpage">
+        <button class="back" id="1"><i class="ri-close-fill"></i></button>
+        <h2>Plan your day to be more Productive</h2>
+        <div class="day-planner"></div>
+      </section>
+
+      <section class="fullElem motivational-fullpage">
+        <button class="back" id="2"><i class="ri-close-fill"></i></button>
+        <div class="motivation-fullPage-container">
+          <div class="motivation-container">
+            <div class="motivation-wrapper">
+              <div class="motivation-1">
+                <h1>Quote of the Day</h1>
+              </div>
+              <div class="motivation-2">
+                <img src="./icons8-quotes-100 (1).png" alt="" />
+                <h2></h2>
+                <img src="./icons8-quotes-100.png" alt="" />
+              </div>
+              <div class="motivation-3">
+                <h2></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullElem pomodoro-fullpage">
+        <button class="back" id="3"><i class="ri-close-fill"></i></button>
+        <h1>Study with me!</h1>
+        <h4 class="session">Work Session</h4>
+        <div class="pomo-timer">
+          <h1>25:00</h1>
+          <button class="start">Start</button>
+          <button class="pause">Pause</button>
+          <button class="reset">Reset</button>
+        </div>
+      </section>
+
+      <section class="fullElem daily-goals-fullpage">
+         <button class="back" id="0"><i class="ri-close-fill"></i></button>
+        <h2>Daily Goals</h2>
+        <div class="goal-container">
+          <div class="addGoals">
+            <form>
+              <input id="goal-input" type="text" placeholder="Enter goal" />
+              
+              <div class="mark-imp">
+                <input type="checkbox" name="" id="checkbox" />
+                <label for="checkbox">Mark as Important!</label>
+              </div>
+              <button>Add Goal</button>
+            </form>
+          </div>
+          <div class="allGoals"></div>
+        </div>
+      </section>
+
+      
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
