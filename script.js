@@ -178,3 +178,93 @@ function pomodoroTimer() {
   resetBtn.addEventListener("click", resetTimer);
 }
 pomodoroTimer();
+
+function weatherFunctionality(){
+var APIKey = "886218673bbb4e8b9d8133703260702";
+var city = "Gorakhpur";
+var data = null;
+var header1Time = document.querySelector(".header1 h1");
+var header1Date= document.querySelector(".header1 h2");
+var header2Temp= document.querySelector(".header2 h2");
+var header2Condition= document.querySelector(".header2 h4");
+var precipitation= document.querySelector(".header2 .precipitation");
+var humidity= document.querySelector(".header2 .humidity");
+var wind= document.querySelector(".header2 .wind");
+
+async function weatherAPICall() {
+  var response = await fetch(
+    `http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`,
+  );
+  data = await response.json();
+  console.log(data);
+  
+  header2Temp.innerHTML= `${data.current.temp_c}°C`
+  header2Condition.innerHTML=`${data.current.condition.text}`
+  wind.innerHTML=`Wind: ${data.current.wind_kph}km/h`
+  humidity.innerHTML=`Humidity: ${data.current.humidity}%`
+  precipitation.innerHTML=`Heat Index: ${data.current.heatindex_c}°C`
+}
+weatherAPICall();
+
+function timedate() {
+  const totalDaysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const totalMonths=[
+    "January",
+    "Fabruary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ]
+  var date = new Date();
+  var dayOfWeek =totalDaysOfWeek[date.getDay()];
+  var hours= date.getHours();
+  var minutes = date.getMinutes();
+  var seconds= date.getSeconds()
+  var tarikh = date.getDate()
+  var month= totalMonths[date.getMonth()];
+  var year= date.getFullYear();
+
+  header1Date.innerHTML=`${tarikh} ${month}, ${year}`
+
+  if(hours>12){
+    header1Time.innerHTML = `${dayOfWeek}, ${String(hours-12).padStart('2','0')}:${String(minutes).padStart('2','0')}:${String(seconds).padStart('2','0')} PM`;
+  }
+  else{
+    header1Time.innerHTML = `${dayOfWeek}, ${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}:${String(seconds).padStart('2','0')}AM`;
+  }
+}
+
+setInterval(()=>{
+  timedate()
+},1000)
+}
+weatherFunctionality()
+
+function changeTheme(){
+var theme= document.querySelector('.theme');
+var rootElement= document.documentElement
+var flag=0;
+theme.addEventListener('click', ()=>{
+   /* --pre: #eff7f9;
+  --sec: #0f5257;
+  --tri1: #0b3142;
+  --tri2: #bfd7ea; */
+  if(flag == 0){
+  rootElement.style.setProperty('--pri', '#E6501B')
+   rootElement.style.setProperty('--sec', '#740A03')
+    rootElement.style.setProperty('--tri1', '#280905')
