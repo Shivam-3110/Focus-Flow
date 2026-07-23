@@ -268,3 +268,77 @@ theme.addEventListener('click', ()=>{
   rootElement.style.setProperty('--pri', '#E6501B')
    rootElement.style.setProperty('--sec', '#740A03')
     rootElement.style.setProperty('--tri1', '#280905')
+     rootElement.style.setProperty('--tri2', '#C3110C')
+     flag=1;
+  }
+  else if(flag==1){
+rootElement.style.setProperty('--pri', '#eff7f9')
+   rootElement.style.setProperty('--sec', '#0f5257')
+    rootElement.style.setProperty('--tri1', '#0b3142')
+     rootElement.style.setProperty('--tri2', '#bfd7ea')
+     flag=2;
+  }
+  else if(flag==2){
+rootElement.style.setProperty('--pri', '#EFE1B5')
+   rootElement.style.setProperty('--sec', '#5DD3B6')
+    rootElement.style.setProperty('--tri1', '#6E5034')
+     rootElement.style.setProperty('--tri2', '#CDB885')
+     flag=0;
+  }
+})
+}
+changeTheme();
+
+function dailyGoals(){
+  let form = document.querySelector(".addGoals form");
+  let goalInput = document.querySelector(".addGoals form #goal-input");
+/*   let taskDetailsInput = document.querySelector(".addGoals form  textarea");*/
+  let goalCheckbox = document.querySelector(".addGoals form #checkbox");
+
+  let currentGoal = [];
+
+  if (localStorage.getItem("currentGoal")) {
+    currentGoal = JSON.parse(localStorage.getItem("currentGoal"));
+  } else {
+    console.log("Goal list is empty");
+  }
+
+  function renderGoal() {
+    var allGoals = document.querySelector(".allGoals");
+
+    var add = "";
+    currentGoal.forEach(function (elem, idx) {
+      add += `<div class="goals">
+            <h5>${elem.task} <span class = ${elem.imp}>imp</span> </h5>
+            <button id=${idx}>Mark as completed</button>
+          </div>`;
+    });
+    allGoals.innerHTML = add;
+
+    localStorage.setItem("currentGoal", JSON.stringify(currentGoal));
+
+    let markCompletedBtn = document
+      .querySelectorAll(".goals button")
+      .forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          currentGoal.splice(btn.id, 1);
+          renderGoal();
+        });
+      });
+  }
+  renderGoal();
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    currentGoal.push({
+      goals: goalInput.value,
+      imp: goalCheckbox.checked,
+    });
+    renderGoal();
+
+    goalInput.value = "";
+    goalCheckbox.checked = false;
+  });
+}
+dailyGoals();
