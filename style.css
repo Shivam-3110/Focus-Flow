@@ -358,3 +358,93 @@ header .header2 h3 {
   background-color: var(--tri2);
   border-radius: 40px;
 }
+.motivation-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.motivation-1 h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  width: fit-content;
+  color: var(--tri2);
+  background-color: var(--tri1);
+}
+.motivation-2 {
+  padding: 10px;
+  margin-top: 20px;
+}
+.motivation-2 h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.motivation-2 img {
+  opacity: 0.5;
+  height: 40px;
+}
+.motivation-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.motivation-3 h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  padding: 10px;
+  border-radius: 20px;
+  width: fit-content;
+  color: var(--tri2);
+  background-color: var(--tri1);
+  margin-top: 10px;
+}
+.pomodoro-fullpage h1 {
+  font-size: 50px;
+  color: var(--pre);
+}
+.pomodoro-fullpage .pomo-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pomo-timer h1 {
+  font-size: 100px;
+}
+.pomo-timer button {
+  background-color: var(--tri2);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px 0px black;
+  transition: all ease 0.2s;
+}
+.pomo-timer button:active {
+  box-shadow: 0px 0px 0px black;
+}
+.pomodoro-fullpage .session {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 15px 30px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: var(--tri2);
+}
+nav {
+  position: fixed;
+  z-index: 99;
+  height: 60px;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--tri2);
+  top: 0;
+}
