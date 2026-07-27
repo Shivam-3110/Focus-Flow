@@ -538,3 +538,94 @@ section.allElems {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 60px;
+  margin-bottom: 50px;
+}
+header .header1 h2 {
+  color: var(--pre);
+  font-size: 30px;
+  font-weight: 500;
+}
+header .header1 h1 {
+  color: var(--pre);
+  font-size: 40px;
+  font-weight: 700;
+}
+header .header1 h4 {
+  color: var(--pre);
+  font-size: 30px;
+  font-weight: 500;
+}
+header .header2 h2 {
+  color: var(--pre);
+  font-size: 30px;
+  font-weight: 700;
+}
+header .header2 h4 {
+  color: var(--pre);
+  font-size: 25px;
+  font-weight: 500;
+}
+header .header2 h3 {
+  color: var(--pre);
+  font-size: 20px;
+  font-weight: 500;
+}
+.allElems .allFeatures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 40px;
+}
+.elem {
+  background-color: var(--sec);
+  overflow: hidden;
+  font-size: 20px;
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.elem h2 {
+  bottom: 4%;
+  font-weight: 400px;
+  position: absolute;
+  right: 5%;
+  font-size: 20px;
+}
+.elem:active {
+  scale: 0.95;
+}
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--tri1);
+  padding: 40px;
+  display: none;
+  position: absolute;
+  color: var(--tri2);
+  top: 0;
+  z-index: 999;
+}
