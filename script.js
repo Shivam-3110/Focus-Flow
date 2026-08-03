@@ -207,20 +207,33 @@ var precipitation= document.querySelector(".header2 .precipitation");
 var humidity= document.querySelector(".header2 .humidity");
 var wind= document.querySelector(".header2 .wind");
 
-async function weatherAPICall() {
+async function weatherAPICall(q) {
   var response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`,
+    `https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${q}`,
   );
   data = await response.json();
-  console.log(data);
-  
+
   header2Temp.innerHTML= `${data.current.temp_c}°C`
   header2Condition.innerHTML=`${data.current.condition.text}`
   wind.innerHTML=`Wind: ${data.current.wind_kph}km/h`
   humidity.innerHTML=`Humidity: ${data.current.humidity}%`
   precipitation.innerHTML=`Heat Index: ${data.current.heatindex_c}°C`
+  document.querySelector(".header1 h4").innerHTML=`${data.location.name}, ${data.location.country}`
 }
-weatherAPICall();
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    function(position) {
+      var q = `${position.coords.latitude},${position.coords.longitude}`;
+      weatherAPICall(q);
+    },
+    function() {
+      weatherAPICall(city);
+    }
+  );
+} else {
+  weatherAPICall(city);
+}
 
 function timedate() {
   const totalDaysOfWeek = [
