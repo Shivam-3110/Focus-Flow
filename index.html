@@ -1,4 +1,4 @@
-!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <title>Focus-Flow</title>
     <link
       rel="shortcut icon"
-      href="./favicon_io/apple-touch-icon.png"
+      href="./favicon_io/target.png"
       type="image/x-icon"
     />
     <link
@@ -84,7 +84,7 @@
       </section>
 
       <section class="fullElem todo-list-fullpage">
-        <button class="back" id="0"><i class="ri-close-fill"></i></button>
+        <button type="button" class="back" id="0"><i class="ri-close-fill"></i></button>
         <h2>Your Personalised Task List</h2>
         <div class="todo-container">
           <div class="addTask">
@@ -93,15 +93,15 @@
               <textarea
                 placeholder="Enter details"
                 name=""
-                row="10"
+                rows="10"
                 cols="30"
-                id=""
               ></textarea>
               <div class="mark-imp">
-                <input type="checkbox" name="" id="checkbox" />
-                <label for="checkbox">Mark as Important!</label>
+                <input type="checkbox" name="" id="task-checkbox" />
+                <label for="task-checkbox">Mark as Important!</label>
               </div>
-              <button>Add Task</button>
+              <button type="submit">Add Task</button>
+              <p class="error-msg"></p>
             </form>
           </div>
           <div class="allTask"></div>
@@ -148,7 +148,7 @@
       </section>
 
       <section class="fullElem daily-goals-fullpage">
-         <button class="back" id="0"><i class="ri-close-fill"></i></button>
+         <button type="button" class="back" id="4"><i class="ri-close-fill"></i></button>
         <h2>Daily Goals</h2>
         <div class="goal-container">
           <div class="addGoals">
@@ -156,10 +156,11 @@
               <input id="goal-input" type="text" placeholder="Enter goal" />
               
               <div class="mark-imp">
-                <input type="checkbox" name="" id="checkbox" />
-                <label for="checkbox">Mark as Important!</label>
+                <input type="checkbox" name="" id="goal-checkbox" />
+                <label for="goal-checkbox">Mark as Important!</label>
               </div>
-              <button>Add Goal</button>
+              <button type="submit">Add Goal</button>
+              <p class="error-msg"></p>
             </form>
           </div>
           <div class="allGoals"></div>

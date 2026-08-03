@@ -21,7 +21,7 @@ function todoList() {
   let form = document.querySelector(".addTask form");
   let taskInput = document.querySelector(".addTask form #task-input");
   let taskDetailsInput = document.querySelector(".addTask form  textarea");
-  let taskCheckbox = document.querySelector(".addTask form #checkbox");
+  let taskCheckbox = document.querySelector(".addTask form #task-checkbox");
 
   let currentTask = [];
 
@@ -56,12 +56,28 @@ function todoList() {
   }
   renderTask();
 
+  let taskError = document.querySelector(".addTask .error-msg");
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    taskError.textContent = "";
+
+    if (taskInput.value.trim() === "") {
+      taskError.textContent = "Task name cannot be empty.";
+      return;
+    }
+    if (taskInput.value.trim().length > 100) {
+      taskError.textContent = "Task name cannot exceed 100 characters.";
+      return;
+    }
+    if (taskDetailsInput.value.trim().length > 300) {
+      taskError.textContent = "Details cannot exceed 300 characters.";
+      return;
+    }
 
     currentTask.push({
-      task: taskInput.value,
-      details: taskDetailsInput.value,
+      task: taskInput.value.trim(),
+      details: taskDetailsInput.value.trim(),
       imp: taskCheckbox.checked,
     });
     renderTask();
@@ -108,9 +124,9 @@ function motivationalQuote() {
   var motivationAuthor = document.querySelector(".motivation-3 h2");
 
   async function fetchQuote() {
-    let response = await fetch("http://api.quotable.io/random");
+    let response = await fetch("https://dummyjson.com/quotes/random");
     let data = await response.json();
-    motivationQuoteContent.innerHTML = data.content;
+    motivationQuoteContent.innerHTML = data.quote;
     motivationAuthor.innerHTML = data.author;
   }
   fetchQuote();
@@ -193,7 +209,7 @@ var wind= document.querySelector(".header2 .wind");
 
 async function weatherAPICall() {
   var response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`,
+    `https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`,
   );
   data = await response.json();
   console.log(data);
@@ -293,7 +309,7 @@ function dailyGoals(){
   let form = document.querySelector(".addGoals form");
   let goalInput = document.querySelector(".addGoals form #goal-input");
 /*   let taskDetailsInput = document.querySelector(".addGoals form  textarea");*/
-  let goalCheckbox = document.querySelector(".addGoals form #checkbox");
+  let goalCheckbox = document.querySelector(".addGoals form #goal-checkbox");
 
   let currentGoal = [];
 
@@ -309,7 +325,7 @@ function dailyGoals(){
     var add = "";
     currentGoal.forEach(function (elem, idx) {
       add += `<div class="goals">
-            <h5>${elem.task} <span class = ${elem.imp}>imp</span> </h5>
+            <h5>${elem.goals} <span class = ${elem.imp}>imp</span> </h5>
             <button id=${idx}>Mark as completed</button>
           </div>`;
     });
@@ -328,11 +344,23 @@ function dailyGoals(){
   }
   renderGoal();
 
+  let goalError = document.querySelector(".addGoals .error-msg");
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    goalError.textContent = "";
+
+    if (goalInput.value.trim() === "") {
+      goalError.textContent = "Goal cannot be empty.";
+      return;
+    }
+    if (goalInput.value.trim().length > 100) {
+      goalError.textContent = "Goal cannot exceed 100 characters.";
+      return;
+    }
 
     currentGoal.push({
-      goals: goalInput.value,
+      goals: goalInput.value.trim(),
       imp: goalCheckbox.checked,
     });
     renderGoal();
