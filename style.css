@@ -898,3 +898,304 @@ header .header2 h3 {
   height: 100%;
   width: 100%;
   position: absolute;
+  background-color: var(--tri2);
+  border-radius: 50px;
+  scale: 1.15;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  z-index: 8;
+}
+.motivational-fullpage .motivation-container .motivation-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--tri2);
+  border-radius: 40px;
+}
+.motivation-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.motivation-1 h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--tri2);
+  background-color: var(--tri1);
+}
+.motivation-2 {
+  padding: 10px;
+  margin-top: 20px;
+}
+.motivation-2 h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.motivation-2 img {
+  opacity: 0.5;
+  height: 40px;
+}
+.motivation-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.motivation-3 h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  padding: 10px;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--tri2);
+  background-color: var(--tri1);
+  margin-top: 10px;
+}
+.pomodoro-fullpage h1 {
+  font-size: 50px;
+  color: var(--pre);
+}
+.pomodoro-fullpage .pomo-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pomo-timer h1 {
+  font-size: 100px;
+}
+.pomo-timer button {
+  background-color: var(--tri2);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 5px 5px 0px black;
+  box-shadow: 5px 5px 0px black;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+.pomo-timer button:active {
+  -webkit-box-shadow: 0px 0px 0px black;
+  box-shadow: 0px 0px 0px black;
+}
+.pomodoro-fullpage .session {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  padding: 15px 30px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: var(--tri2);
+}
+nav {
+  position: fixed;
+  z-index: 99;
+  height: 60px;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--tri2);
+  top: 0;
+}
+.nav-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 10px;
+  height: 100%;
+}
+.nav-in h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.theme {
+  background-color: var(--tri1);
+  padding: 15px;
+  border-radius: 50%;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+.theme i {
+  color: var(--tri2);
+  font-weight: 700;
+  font-size: 20px;
+  pointer-events: none;
+}
+.theme:active {
+  scale: 0.94;
+}
+/* Daily goals */
+
+
+.daily-goals-fullpage h2 {
+  font-size: 50px;
+  color: var(--pre);
+}
+.daily-goals-fullpage .goal-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.daily-goals-fullpage .goal-container .addGoals {
+  width: 40%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+.daily-goals-fullpage .goal-container .allGoals {
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--tri2);
+}
+.daily-goals-fullpage .goal-container .addGoals form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+.goal-container .addGoals form #goal-input {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--pre);
+  outline: none;
+  margin-bottom: 20px;
+}
+/* .goal-container .addGoals form textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--pre);
+  outline: none;
+  margin-bottom: 20px;
+} */
+.goal-container .addGoals form button {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--sec);
+  color: var(--pre);
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: all ease 0.3s;
+}
+.goal-container .addGoals form button:active {
+  scale: 0.96;
+}
+.daily-goals-fullpage .goal-container .allGoals {
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--tri2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+  overflow: auto;
+}
+.goals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: var(--pre);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.goals h5 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.goals h5 span {
+  font-size: 10px;
+  color: white;
+  background-color: red;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+.goals h5 span.true {
+  opacity: 1;
+}
+.goals h5 span.false {
+  opacity: 0;
+}
+.goals button {
+  padding: 15px 30px;
+  background-color: var(--sec);
+  color: var(--pre);
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.goals button:active {
+  scale: 0.95;
+}
+.mark-imp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 30px;
+}
+.mark-imp input {
+  scale: 1.7;
+}
+.mark-imp label {
+  font-size: 20px;
+}
